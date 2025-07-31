@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  fast-vrl:
+    build: .
+    container_name: fast-vrl
+    restart: always
+    expose:
+      - "8000"
+    networks:
+      - fastapi_network
+
+networks:
+  fastapi_network:
+    external: true
